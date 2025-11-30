@@ -5,6 +5,8 @@
 <html>
 <head runat="server">
     <title></title>
+            <asp:ContentPlaceHolder id="head" runat="server">
+        </asp:ContentPlaceHolder>
 </head>
 <body>
     <h1>hadas's web site </h1>
@@ -13,8 +15,8 @@
         <tr><td>    <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
     </asp:ContentPlaceHolder></td></tr>
     </table>
-        <sp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        </sp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
 
 </body>
 </html>
