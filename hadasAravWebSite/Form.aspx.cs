@@ -7,13 +7,14 @@ using System.Web.UI.WebControls;
 
 public partial class _Default : System.Web.UI.Page
 {
-    public string name, number;
+    public string name, number, subject;
     protected void Page_Load(object sender, EventArgs e)
     {
         if (IsPostBack)
         {
             name = "Name: " + Request.Form["firstName"];
             number = "Number: " + Request.Form["number"];
+            subject = "Subject: " + Request.Form["subject"];
         }
     }
 }
