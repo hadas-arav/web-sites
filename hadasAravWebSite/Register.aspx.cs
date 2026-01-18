@@ -1,19 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
-public partial class _Default : System.Web.UI.Page
+public partial class harshama : Page
 {
-    public string name, welcome;
+    public string st = "";
+
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (IsPostBack)
+        if (Page.IsPostBack)
         {
-            name =Request.Form["name"];
-            welcome = "Welcome to the website," + name + "!";
+            string fn = Request.Form["name"];
+            string age = Request.Form["age"];
+
+            string sqlInsert =
+                "INSERT INTO tUsers VALUES (" +
+                "N'" + fn + "'," +
+                age +
+                ")";
+
+            MyAdoHelper.DoQuery("MyDB.mdf", sqlInsert);
+
+            st = "נרשמת בהצלחה!";
         }
     }
+}
+
 }
