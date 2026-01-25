@@ -38,5 +38,5 @@
     <input type="checkbox" name="hobby" id="nerd" value="nerd"/> מחשבתי <br />
     <input type="checkbox" name="hobby" id="ball" value="ball"/> משחקי כדור <br />
     <input type="submit" name="submit" id="submit"/> <br />
-    
+    <%=st %>
 </asp:Content>
