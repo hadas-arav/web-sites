@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.UI;
 
-public partial class harshama : Page
+public partial class register: Page
 {
     public string st = "";
 
@@ -23,6 +23,4 @@ public partial class harshama : Page
             st = "נרשמת בהצלחה!";
         }
     }
-}
-
 }

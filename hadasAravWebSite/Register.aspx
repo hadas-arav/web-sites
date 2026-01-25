@@ -23,7 +23,7 @@
         <option value="058">058</option>
         <option value="059">059</option>
     </select>
-    <input type="tel" name="tel" id="tel" /> מספר טלפון<br />
+    <input type="tel" name="tel2" id="tel2" /> מספר טלפון<br />
     <p>בחר את טווח הגילאים של שלך/ של הילד/ה שלך</p>
     <input type="radio" name="age" id="little" value="little"/> גילאי גן <br />
     <input type="radio" name="age" id="first" value="first"/> גיל 7-9 <br />
