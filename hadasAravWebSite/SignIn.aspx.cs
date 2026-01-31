@@ -5,38 +5,33 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class _Default : System.Web.UI.Page
+
+public partial class Default2 : Page
 {
+    public string st = "";
 
-public partial class login : System.Web.UI.Page
+    protected void Page_Load(object sender, EventArgs e)
     {
-        public string st = "";
-
-        protected void Page_Load(object sender, EventArgs e)
+        if (Page.IsPostBack)
         {
-            if (Page.IsPostBack)
+            string email = Request.Form["email"];
+            string pass = Request.Form["password"];
+
+            string sql =
+                "SELECT * FROM tUsers " +
+                "WHERE Email = '" + email + "' " +
+                "AND UserPassword = '" + pass + "'";
+
+            bool userExists = MyAdoHelper.IsExist(sql);
+
+            if (!userExists)
             {
-                string email = Request.Form["email"];
-                string pass = Request.Form["pass"];
-
-                // בדיקת משתמש רגיל
-                string sql =
-                    "SELECT * FROM tUsers " +
-                    "WHERE Email = '" + email + "' " +
-                    "AND UserPassword = '" + pass + "'";
-
-                bool userExists = MyAdoHelper.IsExist(sql);
-
-                if (!userExists)
-                {
-                    st = "אימייל או סיסמה שגויים";
-                }
-                else
-                {
-                    Response.Redirect("home.aspx");
-                }
+                st = "אימייל או סיסמה שגויים";
+            }
+            else
+            {
+                Response.Redirect("Home.aspx");
             }
         }
     }
-
 }

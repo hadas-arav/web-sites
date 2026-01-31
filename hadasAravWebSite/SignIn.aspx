@@ -1,4 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="Default2" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master"
+    AutoEventWireup="true"
+    CodeFile="SignIn.aspx.cs"
+    Inherits="Default2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -11,5 +14,6 @@
     <h3>This is a page for signing</h3>
        <input type="email" name="email" id="email" /> אימייל<br />
    <input type="password" name="password" id="password" /> סיסמא<br />
+    <input type="submit" name="submit" id="submit"/> <br />
     <%=st %>
 </asp:Content>

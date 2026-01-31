@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.UI;
 
-public partial class register: Page
+public partial class Register: Page
 {
     public string st = "";
 
