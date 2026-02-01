@@ -19,8 +19,8 @@ public partial class Default2 : Page
 
             string sql =
                 "SELECT * FROM tUsers " +
-                "WHERE Email = '" + email + "' " +
-                "AND UserPassword = '" + pass + "'";
+                "WHERE Email = N'" + email + "' " +
+                "AND Password = N'" + pass + "'";
 
             bool userExists = MyAdoHelper.IsExist(sql);
 

@@ -15,29 +15,33 @@ public partial class Register: Page
             string phone = Request.Form["poneNumber"];
             string age = Request.Form["ageGroup"];
             string hobby = Request.Form["hobby"];
-            string sqlInsert =
-                "INSERT INTO tUsers VALUES (" +
-                "N'" + fn + "'," +
-                "N'" + email + "'," + 
-                "N'" + pass + "'," + 
-                "N'" + phone + "'," + 
-                "N'" + age + "'," + 
-                "N'" + hobby + "'" +
-                ")";
 
-            MyAdoHelper.DoQuery("MyDB.mdf", sqlInsert);
+            string sql =
+    "SELECT * FROM tUsers " +
+    "WHERE Email = N'" + email + "' ";
 
-            bool userExists = MyAdoHelper.IsExist(sqlInsert);
+            bool userExists = MyAdoHelper.IsExist(sql);
 
             if (!userExists)
             {
-                st = "אימייל או סיסמה שגויים";
+                st = "המשתמש הזה כבר רשום";
             }
             else
             {
-                Response.Redirect("home.aspx");
+
+                string sqlInsert =
+    "INSERT INTO tUsers VALUES (" +
+    "N'" + fn + "'," +
+    "N'" + email + "'," +
+    "N'" + pass + "'," +
+    "N'" + phone + "'," +
+    "N'" + age + "'," +
+    "N'" + hobby + "'" +
+    ")";
+                st = "נרשמת בהצלחה!";
+                Response.Redirect("SignIn.aspx");
             }
-            st = "נרשמת בהצלחה!";
+           
         }
     }
 }
