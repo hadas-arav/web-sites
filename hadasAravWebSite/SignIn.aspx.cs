@@ -17,21 +17,29 @@ public partial class Default2 : Page
             string email = Request.Form["email"];
             string pass = Request.Form["password"];
 
-            string sql =
-                "SELECT * FROM tUsers " +
-                "WHERE Email = N'" + email + "' " +
-                "AND Password = N'" + pass + "'";
-
-            bool userExists = MyAdoHelper.IsExist(sql);
-
-            if (!userExists)
+            if (email == "hadas.arav@gmail.com" && pass == "12345")
             {
-                st = "אימייל או סיסמה שגויים";
+                Response.Redirect("Admin.aspx");
             }
             else
             {
-                Response.Redirect("Home.aspx");
+                string sql =
+                    "SELECT * FROM tUsers " +
+                    "WHERE Email = N'" + email + "' " +
+                    "AND Password = N'" + pass + "'";
+
+                bool userExists = MyAdoHelper.IsExist(sql);
+
+                if (!userExists)
+                {
+                    st = "אימייל או סיסמה שגויים";
+                }
+                else
+                {
+                    Response.Redirect("Home.aspx");
+                }
             }
         }
     }
 }
+
