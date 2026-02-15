@@ -11,38 +11,44 @@ public partial class Admin : System.Web.UI.Page
     public string st = "";
     protected void Page_Load(object sender, EventArgs e)
     {
-        string sql = "SELECT * FROM tUsers";
-
-        DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
-
-        if (dt.Rows.Count == 0)
+        if (Page.IsPostBack)
         {
-            st = "אין נתונים";
-        }
-        else
-        {
-            st += "<table border='1'>";
-            st += "<tr>";
-            st += "<th>שם מלא</th>";
-            st += "<th>מייל</th>";
-            st += "<th>סיסמא</th>";
-            st += "<th>מספר טלפון</th>";
-            st += "<th>קבוצת גיל</th>";
-            st += "<th>תחביבים</th>";
-            st += "</tr>";
+            string fn = Request.Form["name"];
+            string email = Request.Form["email"];
 
-            for (int i = 0; i < dt.Rows.Count; i++)
+            string sql = "SELECT * FROM tUsers WHERE " + "FullName = N'" + fn + "' AND " + "Email = N'" + email + "'";
+
+            DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
+
+            if (dt.Rows.Count == 0)
             {
-                st += "<tr>";
-
-                for (int j = 0; j < dt.Columns.Count; j++)
-                {
-                    st += "<td>" + dt.Rows[i][j] + "</td>";
-                }
-
-                st += "</tr>";
+                st = "אין נתונים";
             }
-            st += "</table>";
+            else
+            {
+                st += "<table border='1'>";
+                st += "<tr>";
+                st += "<th>שם מלא</th>";
+                st += "<th>מייל</th>";
+                st += "<th>סיסמא</th>";
+                st += "<th>מספר טלפון</th>";
+                st += "<th>קבוצת גיל</th>";
+                st += "<th>תחביבים</th>";
+                st += "</tr>";
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    st += "<tr>";
+
+                    for (int j = 0; j < dt.Columns.Count; j++)
+                    {
+                        st += "<td>" + dt.Rows[i][j] + "</td>";
+                    }
+
+                    st += "</tr>";
+                }
+                st += "</table>";
+            }
         }
     }
 }

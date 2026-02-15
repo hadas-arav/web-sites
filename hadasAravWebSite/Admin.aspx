@@ -9,5 +9,8 @@
      
     <h1  style="text-align:center">This is an Admin page</h1>
     <h3>This is a page for admin</h3>
+         <input type="text" name="name" id="name"/> שם מלא <br />
+    <input type="email" name="email" id="email" /> אימייל<br />
+    <input type="submit" name="submit" id="submit"/> <br />
      <%=st %>;
 </asp:Content>
