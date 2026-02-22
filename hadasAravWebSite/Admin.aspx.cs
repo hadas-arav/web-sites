@@ -16,7 +16,9 @@ public partial class Admin : System.Web.UI.Page
             string fn = Request.Form["name"];
             string email = Request.Form["email"];
 
-            string sql = "SELECT * FROM tUsers WHERE " + "FullName = N'" + fn + "' AND " + "Email = N'" + email + "'";
+            string sql = "SELECT * FROM tUsers WHERE " +
+                "FullName LIKE N'%" + fn + "%' AND " +
+                "Email LIKE N'%" + email + "%'";
 
             DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
 
