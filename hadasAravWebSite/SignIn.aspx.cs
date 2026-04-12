@@ -19,6 +19,7 @@ public partial class Default2 : Page
 
             if (email == "hadas.arav@gmail.com" && pass == "12345")
             {
+                Session["username"] = "מנהל";
                 Response.Redirect("Admin.aspx");
             }
             else
