@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 
 public partial class Default2 : Page
@@ -19,6 +20,7 @@ public partial class Default2 : Page
 
             if (email == "hadas.arav@gmail.com" && pass == "12345")
             {
+                Session["nihul"] = "ok";
                 Session["username"] = "מנהל";
                 Response.Redirect("Admin.aspx");
             }
@@ -29,14 +31,17 @@ public partial class Default2 : Page
                     "WHERE Email = N'" + email + "' " +
                     "AND Password = N'" + pass + "'";
 
-                bool userExists = MyAdoHelper.IsExist(sql);
+                DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
 
-                if (!userExists)
+                if (dt.Rows.Count == 0)
                 {
+                    Session["username"] = "אורח";
                     st = "אימייל או סיסמה שגויים";
                 }
                 else
                 {
+                    Session["user"] = "ok";
+                    Session["username"] = dt.Rows[0]["fullName"];
                     Response.Redirect("Home.aspx");
                 }
             }

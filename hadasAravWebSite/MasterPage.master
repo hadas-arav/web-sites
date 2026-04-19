@@ -21,7 +21,7 @@
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
             </td>
         </tr>
-
+        <%=Session["username"] %>
         
         <tr style="background:pink; text-align:center;">
             <td><a href="Home.aspx">Home</a></td>
