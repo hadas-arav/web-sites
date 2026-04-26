@@ -11,7 +11,7 @@
 
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" method="post" runat="server" onsubmit="return checkAll();" >
 
     <table style="width:100%; border-collapse:collapse;" border="1">
 
