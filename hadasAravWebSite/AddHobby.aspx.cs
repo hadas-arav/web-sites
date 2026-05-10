@@ -16,13 +16,13 @@ public partial class AddHobby : System.Web.UI.Page
             string numberOfPeopleAllowed = Request.Form["numberOfPeopleAllowed"];
             string techerName = Request.Form["techerName"];
 
-            string sqlInsert = "INSERT INTO tHobby (hobbyPrice, numberOfPeopleAllowed, techerName) VALUES (" +
-                 hobbyPrice + ", " +
-                 numberOfPeopleAllowed + ", " +
-                "N'" + techerName + "')";
+            string sqlInsert = "INSERT INTO tHobby (hobbyPrice, numberOfPeopleAllowed, techerName) VALUES ('" +
+                 hobbyPrice + "', '" +
+                 numberOfPeopleAllowed + "', '" +
+                 techerName + "')";
 
             MyAdoHelper.DoQuery("MyDB.mdf", sqlInsert);
-            st = "DONE";
+            st = "בוצע";
         }
 
     }

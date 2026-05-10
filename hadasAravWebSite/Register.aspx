@@ -44,7 +44,7 @@
 
            function checkPassword() {
                password = document.getElementById("password").value;
-               if (password.length < 2 || password.length > 10) {
+               if (password.length < 6 || password.length > 15) {
                    passwordErr.innerHTML = "הסיסמא לא תקין";
                    return false;
                }

@@ -17,26 +17,27 @@
 
        
         <tr>
-            <td colspan="8" style="background:pink; color:white; text-align:center; padding:20px;">
+            <td colspan="9" style="background:pink; color:white; text-align:center; padding:20px;">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
             </td>
         </tr>
         <%=Session["username"] %>
         
         <tr style="background:pink; text-align:center;">
-            <td><a href="Home.aspx">Home</a></td>
-            <td><a href="Info.aspx">Info</a></td>
-            <td><a href="Admin.aspx">Admin</a></td>
-            <td><a href="Gallery.aspx">Gallery</a></td>
-            <td><a href="Register.aspx">Register</a></td>
-            <td><a href="SignIn.aspx">Sign In</a></td>
-            <td><a href="Exit.aspx">Exit</a></td>
+            <td><a href="Home.aspx">בית</a></td>
+            <td><a href="Info.aspx">מידע</a></td>
+            <td><a href="Admin.aspx">מנהל</a></td>
+            <td><a href="Gallery.aspx">גלריה</a></td>
+            <td><a href="Register.aspx">הרשמה</a></td>
+            <td><a href="SignIn.aspx">התחברות</a></td>
+            <td><a href="Exit.aspx">יציאה</a></td>
             <td><a href="Form.aspx">Form</a></td>
+            <td><a href="AddHobby.aspx">(הוספת פריטים (מנהל</a></td>
         </tr>
 
         
         <tr>
-            <td colspan="8" style="padding:20px; text-align:center;">
+            <td colspan="9" style="padding:20px; text-align:center;">
                 <asp:ContentPlaceHolder ID="MainContent" runat="server" />
             </td>
         </tr>
