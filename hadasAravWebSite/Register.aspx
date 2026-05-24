@@ -110,6 +110,7 @@
     <h1>הרשמה</h1>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" Runat="Server">
+      <h3>הכנס את הפרטים שלך בשביל להירשם</h3>
     <div style="width:400px; margin:0 auto;">
 
     <table border="0" dir="rtl">

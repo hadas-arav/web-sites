@@ -25,14 +25,14 @@
         
         <tr style="background:pink; text-align:center;">
             <td><a href="Home.aspx">בית</a></td>
-            <td><a href="Info.aspx">מידע</a></td>
+            <td><a href="aboutMe.aspx">אודות</a></td>
             <td><a href="Admin.aspx">מנהל</a></td>
             <td><a href="Gallery.aspx">גלריה</a></td>
             <td><a href="Register.aspx">הרשמה</a></td>
             <td><a href="SignIn.aspx">התחברות</a></td>
+            <td><a href="AddHobby.aspx">(הוספת פריטים (מנהל</a></td>
             <td><a href="Exit.aspx">יציאה</a></td>
             <td><a href="Form.aspx">Form</a></td>
-            <td><a href="AddHobby.aspx">(הוספת פריטים (מנהל</a></td>
         </tr>
 
         

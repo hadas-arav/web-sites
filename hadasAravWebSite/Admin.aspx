@@ -7,8 +7,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" Runat="server">
      
-    <h1  style="text-align:center">This is an Admin page</h1>
-    <h3>This is a page for admin</h3>
+    <h3>הכנס את המייל והסיסמה שלך בשביל לבדוק אם אתה המנהל</h3>
          <input type="text" name="name" id="name"/> שם מלא <br />
     <input type="email" name="email" id="email" /> אימייל<br />
     <input type="submit" name="submit" id="submit"/> <br />

@@ -9,9 +9,7 @@
     <h1>התחברות</h1>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-
-    <h1  style="text-align:center">This is a page for signing in</h1>
-    <h3>This is a page for signing</h3>
+<h3>הכנס את המייל והסיסמה שלך בשביל לבדוק אם אתה רשום </h3>
        <input type="email" name="email" id="email" /> אימייל<br />
    <input type="password" name="password" id="password" /> סיסמא<br />
     <input type="submit" name="submit" id="submit"/> <br />
