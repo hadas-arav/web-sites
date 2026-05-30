@@ -11,5 +11,5 @@
          <input type="text" name="name" id="name"/> שם מלא <br />
     <input type="email" name="email" id="email" /> אימייל<br />
     <input type="submit" name="submit" id="submit"/> <br />
-     <%=st %>;
+     <%=st %>
 </asp:Content>

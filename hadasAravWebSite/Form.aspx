@@ -33,4 +33,5 @@
     <input type="radio" name="age" id="fifth" value="fifth"/> +גיל 18 <br />
     <input type="submit" name="submit" id="submit"/> <br />
     <%="Welcome to the website,"+ name +"!" %>
+        <%=tableKefel %>
 </asp:Content>

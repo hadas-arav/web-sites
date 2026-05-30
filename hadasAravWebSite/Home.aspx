@@ -7,7 +7,30 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h1  style="text-align:center">This is an Home page</h1>
-    <%=tableKefel %>
+<h1>ברוכים הבאים למרכז החוגים שלנו!</h1>
+        <img src="images/מודרני2.png" alt="ריקוד-מודרני" width="500px" height="333px" style="float: left;">
 
+<p>
+.באתר זה תוכלו למצוא מגוון רחב של חוגים לכל הגילאים, להכיר את כל המדריכים שלנו ולהירשם בקלות ובמהירות
+</p>
+
+<h3 style="text-align:right;">החוגים שלנו</h3>
+
+<p style="text-align:right;">
+!ריקוד, משחקי כדור, משחקי חשיבה, ספורט ימי ועוד <br />
+    .כל חוג מעוצב בקפידה כדי להעניק לכם חוויה מהנה ומעשירה <br />
+    .הצטרפו אלינו ותיהנו מפעילות מגוונת ומאתגרת שתפתח את הדמיון והיצירתיות שלכם
+</p>
+
+<h3 style="text-align:right;">?למה לבחור בנו</h3>
+
+<p style="text-align:right;">
+ מדריכים מקצועיים*<br />
+קבוצות קטנות ויחס אישי*<br />
+סביבת לימוד מהנה ובטוחה*
+</p>
+
+<h3 style="text-align:right;">
+!התחילו עכשיו ובחרו את החוג שמתאים לכם
+</h3>
 </asp:Content>
