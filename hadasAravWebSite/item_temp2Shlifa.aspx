@@ -3,10 +3,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <h1>החוגים שלנו</h1>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" Runat="Server">
-             <input type="text" name="numberOfPeopleAllowed" id="numberOfPeopleAllowed"/> מספר האנשים המותר בחוג זה <br />
-    <input type="submit" name="submit" id="submit"/> <br />
-     <%=st %>;
+
+
+    <%= st %>
+
 </asp:Content>
 

@@ -13,7 +13,7 @@
 <body>
     <form id="form1" method="post" runat="server" onsubmit="return checkAll();" >
 
-    <table style="width:100%; border-collapse:collapse;" border="1">
+    <table style="width:100%; border-collapse:collapse;">
 
        
         <tr>
@@ -30,7 +30,8 @@
             <td><a id="regLink" runat="server" href="Register.aspx">הרשמה</a></td>
             <td><a id="logInlink" runat="server" href="SignIn.aspx">התחברות</a></td>
             <td><a id="adminLink" runat="server" href="Admin.aspx">מנהל</a></td>
-            <td><a id="adminLinkTwo" runat="server" href="AddHobby.aspx">(הוספת פריטים (מנהל</a></td>
+            <td><a id="addHobbyLink" runat="server" href="AddHobby.aspx">הוספת חוג</a></td>
+            <td><a id="hobbysLink" runat="server" href="item_temp2Shlifa.aspx">צפייה בחוגים</a></td>
             <td><a id="exitLink" runat="server" href="Exit.aspx">יציאה</a></td>
         </tr>
 
