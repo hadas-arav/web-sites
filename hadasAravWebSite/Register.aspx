@@ -149,7 +149,7 @@
         <tr>
             <td>אימות סיסמא</td>
             <td>
-                <input type="password" name="password2" id="password2" style="width:96%; height:25px;" />
+                <input type="text" name="password2" id="password2" style="width:96%; height:25px;" />
                  <span id="password2Err" style="font-size:15px; color:red;"></span>
             </td>
             <td></td>

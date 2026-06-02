@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h1>בית</h1>
+    <h1>דף הבית</h1>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -15,12 +15,12 @@
         </div>
 
         <div style="float: right;">
-        <img src="images/כדורסל.jpg" alt="כדורסל" width="500px" height="333px" >
+        <img src="images/משחקי כדור.jpg" alt="משחקי כדור" width="500px" height="333px" >
     <br/>
      <img src="images/שחמט.jpg" alt="שחמט" width="500px" height="333px" ></br/>
         </div>
 <p>
-.באתר זה תוכלו למצוא מגוון רחב של חוגים לכל הגילאים, להכיר את כל המדריכים שלנו ולהירשם בקלות ובמהירות
+באתר זה תוכלו למצוא מגוון רחב של חוגים לכל הגילאים, להכיר את כל המדריכים שלנו ולהירשם בקלות ובמהירות
 </p>
 
 <h3>החוגים שלנו</h3>

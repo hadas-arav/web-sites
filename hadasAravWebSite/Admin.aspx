@@ -7,7 +7,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" Runat="server">
      
-    <h3>הכנס את המייל והסיסמה שלך בשביל לבדוק אם אתה המנהל</h3>
+    <h3>הכנס שם מלא ואימייל (או רק את אחד מהם) של אחד הרשומים בשביל למצוא אותו</h3>
          <input type="text" name="name" id="name"/> שם מלא <br />
     <input type="email" name="email" id="email" /> אימייל<br />
     <input type="submit" name="submit" id="submit"/> <br />
