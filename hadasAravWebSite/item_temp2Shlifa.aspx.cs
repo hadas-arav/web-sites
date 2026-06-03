@@ -30,10 +30,10 @@ public partial class _Default : System.Web.UI.Page
         {
             st = "<table border='1'>";
             st += "<th>id</th>";
-            st += "<th>hobbyName</th>";
-            st += "<th>hobbyPrice</th>";
-            st += "<th>numberOfPeopleAllowed</th>";
-            st += "<th>hobbyName</th>";
+            st += "<th>שם החוג</th>";
+            st += "<th>מחיר החוג</th>";
+            st += "<th>מספר אנשים מותר</th>";
+            st += "<th>שם המורה</th>";
             st += "<tr>";
 
             for (int i = 0; i < dt.Rows.Count; i++)

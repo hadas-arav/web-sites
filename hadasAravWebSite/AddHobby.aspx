@@ -2,18 +2,31 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <script language="javascript">
-    function checkAll() {
+        function checkAll() {
+        nameErr.innerHTML = "";
         priceErr.innerHTML = "";
         numberErr.innerHTML = "";
         teacherErr.innerHTML = "";
 
         f = true;
 
+        f = checkName() && f;
         f = checkPrice() && f;
         f = checkNumberOfPeople() && f;
         f = checkTeacherName() && f;
 
         return f;
+    }
+
+    function checkName() {
+        name = document.getElementById("hobbyName").value;
+
+        if (name.length < 2 || name.length > 30) {
+            nameErr.innerHTML = "שם החוג לא תקין";
+            return false;
+        }
+
+        return true;
     }
 
     function checkPrice() {
@@ -55,6 +68,11 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" Runat="Server">
 <form method="post" onsubmit="return checkAll();">
+
+     שם החוג
+    <input type="text" name="hobbyName" id="hobbyName"/>
+    <span id="priceErr" style="color:red; display:inline-block; width:150px;"></span>
+    <br />
 
     מחיר לחוג זה
     <input type="text" name="price" id="price"/>

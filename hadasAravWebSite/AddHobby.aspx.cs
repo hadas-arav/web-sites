@@ -12,13 +12,15 @@ public partial class AddHobby : System.Web.UI.Page
     {
         if (Page.IsPostBack)
         {
+            string hobbyName = Request.Form["hobbyName"];
             string hobbyPrice = Request.Form["price"];
             string numberOfPeopleAllowed = Request.Form["numberOfPeopleAllowed"];
             string techerName = Request.Form["techerName"];
 
-            string sqlInsert = "INSERT INTO tHobby (hobbyPrice, numberOfPeopleAllowed, techerName) VALUES ('" +
+            string sqlInsert = "INSERT INTO tHobby (hobbyName, hobbyPrice, numberOfPeopleAllowed, techerName) VALUES (N'" +
+                 hobbyName + "', '" +
                  hobbyPrice + "', '" +
-                 numberOfPeopleAllowed + "', '" +
+                 numberOfPeopleAllowed + "', N'" +
                  techerName + "')";
 
             MyAdoHelper.DoQuery("MyDB.mdf", sqlInsert);
