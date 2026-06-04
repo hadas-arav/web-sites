@@ -21,7 +21,7 @@
     function checkName() {
         name = document.getElementById("hobbyName").value;
 
-        if (name.length < 2 || name.length > 30) {
+        if (name.length < 2 || name.length > 30) { //בודק שהשם בין 2 ל30 תווים
             nameErr.innerHTML = "שם החוג לא תקין";
             return false;
         }
@@ -43,7 +43,7 @@
     function checkNumberOfPeople() {
         number = document.getElementById("numberOfPeopleAllowed").value;
 
-        if (number.length < 1 || isNaN(number)) {
+        if (number.length < 1 || isNaN(number)) { //בודק שזה מספר ושזה גדול מ1
             numberErr.innerHTML = "כמות האנשים לא תקינה";
             return false;
         }
@@ -54,7 +54,7 @@
     function checkTeacherName() {
         teacher = document.getElementById("techerName").value;
 
-        if (teacher.length < 2 || teacher.length > 30) {
+        if (teacher.length < 2 || teacher.length > 30) { //בודק שהשם בין 2 ל30 תווים
             teacherErr.innerHTML = "שם המורה לא תקין";
             return false;
         }
@@ -64,28 +64,29 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h1>(הוספת פריטים (מנהל</h1>
+    <h1>הוספת חוגים</h1>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" Runat="Server">
+    <h3>הכנס את הפרטים של החוג שאתה רוצה להוסיף </h3>
 <form method="post" onsubmit="return checkAll();">
 
-     שם החוג
     <input type="text" name="hobbyName" id="hobbyName"/>
-    <span id="priceErr" style="color:red; display:inline-block; width:150px;"></span>
+     שם החוג
+    <span id="nameErr" style="color:red; display:inline-block; width:150px;"></span>
     <br />
 
-    מחיר לחוג זה
     <input type="text" name="price" id="price"/>
+    מחיר לחוג זה
     <span id="priceErr" style="color:red; display:inline-block; width:150px;"></span>
     <br />
 
-    כמות אנשים מותרת לחוג זה
     <input type="text" name="numberOfPeopleAllowed" id="numberOfPeopleAllowed" />
+    כמות אנשים מותרת לחוג זה
     <span id="numberErr" style="color:red; display:inline-block; width:150px;"></span>
     <br />
 
-    שם המורה לחוג זה
     <input type="text" name="techerName" id="techerName" />
+    שם המורה לחוג זה
     <span id="teacherErr" style="color:red; display:inline-block; width:150px;"></span>
     <br />
 

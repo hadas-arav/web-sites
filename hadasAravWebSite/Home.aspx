@@ -14,7 +14,7 @@
      <img src="images/ספורט ימי.jpg" alt="ספורט ימי" width="500px" height="333px" ></br/>
         </div>
 
-        <div style="float: right;">
+        <div style="float: right;"> 
         <img src="images/משחקי כדור.jpg" alt="משחקי כדור" width="500px" height="333px" >
     <br/>
      <img src="images/שחמט.jpg" alt="שחמט" width="500px" height="333px" ></br/>

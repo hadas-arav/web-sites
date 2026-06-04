@@ -17,9 +17,9 @@ public partial class Register: Page
             string age = Request.Form["age"];
             string hobby = Request.Form["hobby"];
 
-            string sql =
+            string sql = 
     "SELECT * FROM tUsers " +
-    "WHERE Email = N'" + email + "' ";
+    "WHERE Email = N'" + email + "' "; 
 
             bool userExists = MyAdoHelper.IsExist(sql);
 
@@ -40,9 +40,8 @@ public partial class Register: Page
     "N'" + hobby + "'" +
     ")";
 
-                MyAdoHelper.DoQuery("mydb.mdf",sqlInsert);
-                st = "נרשמת בהצלחה!";
-                Response.Redirect("SignIn.aspx");
+                MyAdoHelper.DoQuery("mydb.mdf",sqlInsert); // הוספת הנתונים לטבלה
+                Response.Redirect("SignIn.aspx"); // הפניה לדף התחברות
             }
            
         }

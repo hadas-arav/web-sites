@@ -9,7 +9,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <% Session.Abandon();
-    Response.Redirect("signIn.aspx");
+    Response.Redirect("signIn.aspx"); // יציאה מהמערכת
     %>
     <h1>Exit</h1>
 </asp:Content>

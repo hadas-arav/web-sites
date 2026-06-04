@@ -8,7 +8,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" Runat="Server">
 
 
-    <%= st %>
+    <%= st%>
 
 </asp:Content>
 

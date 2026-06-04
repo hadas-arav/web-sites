@@ -12,7 +12,7 @@ public partial class AddHobby : System.Web.UI.Page
     {
         if (Page.IsPostBack)
         {
-            string hobbyName = Request.Form["hobbyName"];
+            string hobbyName = Request.Form["hobbyName"]; // קבלת הערכים מהטופס
             string hobbyPrice = Request.Form["price"];
             string numberOfPeopleAllowed = Request.Form["numberOfPeopleAllowed"];
             string techerName = Request.Form["techerName"];
@@ -20,10 +20,10 @@ public partial class AddHobby : System.Web.UI.Page
             string sqlInsert = "INSERT INTO tHobby (hobbyName, hobbyPrice, numberOfPeopleAllowed, techerName) VALUES (N'" +
                  hobbyName + "', '" +
                  hobbyPrice + "', '" +
-                 numberOfPeopleAllowed + "', N'" +
-                 techerName + "')";
+                 numberOfPeopleAllowed + "', N'" + // N לפני מחרוזת בעברית כדי לציין שמדובר בטקסט
+                 techerName + "')"; // הוספת עמודה לטבלה
 
-            MyAdoHelper.DoQuery("MyDB.mdf", sqlInsert);
+            MyAdoHelper.DoQuery("MyDB.mdf", sqlInsert); // ביצוע השאילתה להוספת תחביב חדש
             st = "בוצע";
         }
 
