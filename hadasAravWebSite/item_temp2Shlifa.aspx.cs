@@ -29,7 +29,7 @@ public partial class _Default : System.Web.UI.Page
         else
         {
             st = "<table border='1' style='width:95%; margin:auto; background-color:pink;'>"; // יצירת טבלה עם עיצוב
-            st += "<th style='background-color: dark pink;'>id</th>";
+            st += "<th style='background-color:pink;'>id</th>";
             st += "<th style='background-color:pink;'>שם החוג</th>";
             st += "<th style='background-color:pink;'>מחיר החוג</th>";
             st += "<th style='background-color:pink;'>מספר אנשים מותר</th>";

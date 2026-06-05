@@ -14,7 +14,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
         {
             adminLink.Visible = true;
             addHobbyLink.Visible = true;
-            hobbysLink.Visible = false; // admin doesn't see it
+            hobbysLink.Visible = true; // גם המנהל רואה את דף החוגים
 
             exitLink.Visible = true;
             regLink.Visible = false;
@@ -25,7 +25,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
         {
             adminLink.Visible = false;
             addHobbyLink.Visible = false;
-            hobbysLink.Visible = true; // regular users see it
+            hobbysLink.Visible = true; // משתמש רגיל רואה את דף החוגים
 
             exitLink.Visible = true;
             regLink.Visible = false;
@@ -36,7 +36,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
         {
             adminLink.Visible = false;
             addHobbyLink.Visible = false;
-            hobbysLink.Visible = false; // guests don't see it
+            hobbysLink.Visible = false; // אורח לא רואה את דף החוגים
 
             exitLink.Visible = false;
             regLink.Visible = true;

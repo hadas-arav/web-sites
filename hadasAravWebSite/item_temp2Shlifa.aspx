@@ -7,7 +7,10 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" Runat="Server">
 
-
+        <h3>הכנס את שם החוג או את שם המורה של אחד החוגים בשביל למצוא את החוג הספציפי שאתה מחפש</h3>
+         <input type="text" name="name" id="name"/> שם החוג <br />
+    <input type="email" name="email" id="email" /> שם המורה<br />
+    <input type="submit" name="submit" id="submit"/> <br />
     <%= st%>
 
 </asp:Content>
