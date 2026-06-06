@@ -15,7 +15,14 @@
 
     <table style="width:100%; border-collapse:collapse;">
 
-       
+           <tr>
+        <td colspan="9" style="text-align:center; padding:20px;">
+            <h1 style="color:pink; font-size:50px; margin:0;">
+                חוג לכל אחד
+            </h1>
+        </td>
+    </tr>
+
         <tr>
             <td colspan="9" style="background:pink; color:white; text-align:center; padding:20px;">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
@@ -28,7 +35,7 @@
             <td><a href="aboutMe.aspx">אודות</a></td>
             <td><a href="Gallery.aspx">גלריה</a></td>
             <td><a id="regLink" runat="server" href="Register.aspx">הרשמה</a></td>
-            <td><a id="logInlink" runat="server" href="SignIn.aspx">התחברות</a></td>
+            <td><a id="logInlink" runat="server" href="SignIn.aspx">כניסה</a></td>
             <td><a id="adminLink" runat="server" href="Admin.aspx">מנהל</a></td>
             <td><a id="addHobbyLink" runat="server" href="AddHobby.aspx">הוספת חוג</a></td>
             <td><a id="hobbysLink" runat="server" href="item_temp2Shlifa.aspx">צפייה בחוגים</a></td>

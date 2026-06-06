@@ -115,16 +115,14 @@
 
     <table border="0" dir="rtl">
 
-
-        <tr>
-            <td style="width:150px;">שם מלא</td>
-            <td>
-                <input type="text" name="name" id="name" style="width:96%; height:25px;" />
-                <span id="fnErr" style="font-size:15px; color:red;"></span>
-            </td>
-            <td></td>
-        </tr>
-
+<tr>
+    <td style="width:150px;">שם מלא</td>
+    <td>
+        <textarea name="name" id="name" style="width:96%; height:80px;"></textarea>
+        <span id="fnErr" style="font-size:15px; color:red;"></span>
+    </td>
+    <td></td>
+</tr>
 
         <tr>
             <td>אימייל</td>
@@ -203,8 +201,19 @@
                 <input type="checkbox" name="hobby" id="ball" value="ball"> משחקי כדור
             </td>
             <td><span id="hobbyErr" style="font-size:15px; color:red;"></span></td>
+
         </tr>
 
+<tr>
+    <td>שעה מועדפת</td>
+    <td>
+        <select name="time" id="time">
+            <option value="">בחר שעה</option>
+            <option value="afternoon">אחר הצהריים</option>
+            <option value="evening">ערב</option>
+        </select>
+    </td>
+</tr>
         
         <tr>
             <td></td>
