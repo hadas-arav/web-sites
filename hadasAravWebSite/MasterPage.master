@@ -31,15 +31,15 @@
         <%=Session["username"] %> 
         
         <tr style="background:pink; text-align:center;">
-            <td><a href="Home.aspx">בית</a></td> 
-            <td><a href="aboutMe.aspx">אודות</a></td>
-            <td><a href="Gallery.aspx">גלריה</a></td>
-            <td><a id="regLink" runat="server" href="Register.aspx">הרשמה</a></td>
-            <td><a id="logInlink" runat="server" href="SignIn.aspx">כניסה</a></td>
-            <td><a id="adminLink" runat="server" href="Admin.aspx">מנהל</a></td>
-            <td><a id="addHobbyLink" runat="server" href="AddHobby.aspx">הוספת חוג</a></td>
-            <td><a id="hobbysLink" runat="server" href="item_temp2Shlifa.aspx">צפייה בחוגים</a></td>
-            <td><a id="exitLink" runat="server" href="Exit.aspx">יציאה</a></td>
+            <td><a href="Home.aspx" style="color:white">בית</a></td> 
+            <td><a href="aboutMe.aspx" style="color:white">אודות</a></td>
+            <td><a href="Gallery.aspx" style="color:white">גלריה</a></td>
+            <td><a id="regLink" runat="server" href="Register.aspx" style="color:white">הרשמה</a></td>
+            <td><a id="logInlink" runat="server" href="SignIn.aspx" style="color:white">כניסה</a></td>
+            <td><a id="adminLink" runat="server" href="Admin.aspx" style="color:white">מנהל</a></td>
+            <td><a id="addHobbyLink" runat="server" href="AddHobby.aspx" style="color:white">הוספת חוג</a></td>
+            <td><a id="hobbysLink" runat="server" href="item_temp2Shlifa.aspx" style="color:white">צפייה בחוגים</a></td>
+            <td><a id="exitLink" runat="server" href="Exit.aspx" style="color:white">יציאה</a></td>
         </tr>
 
         

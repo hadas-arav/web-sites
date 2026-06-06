@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.UI;
 
-public partial class Register: Page
+public partial class Register : Page
 {
     public string st = "";
 
@@ -16,10 +16,11 @@ public partial class Register: Page
             string phone2 = Request.Form["tel2"];
             string age = Request.Form["age"];
             string hobby = Request.Form["hobby"];
+            string hour = Request.Form["time"]; // תיקון
 
-            string sql = 
-    "SELECT * FROM tUsers " +
-    "WHERE Email = N'" + email + "' "; 
+            string sql =
+                "SELECT * FROM tUsers " +
+                "WHERE Email = N'" + email + "'";
 
             bool userExists = MyAdoHelper.IsExist(sql);
 
@@ -29,21 +30,23 @@ public partial class Register: Page
             }
             else
             {
-
                 string sqlInsert =
-    "INSERT INTO tUsers VALUES (" +
-    "N'" + fn + "'," +
-    "N'" + email + "'," +
-    "N'" + pass + "'," +
-    "N'" + phone1+"-"+phone2 + "'," +
-    "N'" + age + "'," +
-    "N'" + hobby + "'" +
-    ")";
+                    "INSERT INTO tUsers " +
+                    "(FullName, Email, Password, PhoneNumber, AgeGroup, Hobby, hour) " +
+                    "VALUES (" +
+                    "N'" + fn + "'," +
+                    "N'" + email + "'," +
+                    "N'" + pass + "'," +
+                    "N'" + phone1 + "-" + phone2 + "'," +
+                    "N'" + age + "'," +
+                    "N'" + hobby + "'," +
+                    "N'" + hour + "'" +
+                    ")";
 
-                MyAdoHelper.DoQuery("mydb.mdf",sqlInsert); // הוספת הנתונים לטבלה
-                Response.Redirect("SignIn.aspx"); // הפניה לדף התחברות
+                MyAdoHelper.DoQuery("mydb.mdf", sqlInsert);
+
+                Response.Redirect("SignIn.aspx");
             }
-           
         }
     }
 }

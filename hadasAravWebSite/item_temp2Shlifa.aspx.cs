@@ -1,54 +1,58 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 public partial class _Default : System.Web.UI.Page
 {
     public string st = "";
+
     protected void Page_Load(object sender, EventArgs e)
     {
-        string nopa = Request.Form["numberOfPeopleAllowed"]; // קבלת הערך מהטופס
+        string hobbyName = Request.Form["hobbyName"];
+        string teacherName = Request.Form["teacherName"];
 
-        string sql = "SELECT * FROM tHobby"; // שאילתא לבחירת כל הנתונים מטבלת החוגים
+        string sql = "SELECT * FROM tHobby WHERE 1=1";
 
-        if (!string.IsNullOrEmpty(nopa)) // בדיקה אם המשתמש הזין ערך
+        if (!string.IsNullOrEmpty(hobbyName))
         {
-            sql += " WHERE numberOfPeopleAllowed <= " + nopa; // הוספת תנאי לשאילתא כדי לסנן את החוגים לפי מספר האנשים המותר
+            sql += " AND hobbyName LIKE N'%" + hobbyName + "%'";
         }
 
-        DataTable dt = MyAdoHelper.ExecuteDataTable(sql); // ביצוע השאילתא וקבלת התוצאות בטבלה
+        if (!string.IsNullOrEmpty(teacherName))
+        {
+            sql += " AND techerName LIKE N'%" + teacherName + "%'";
+        }
 
-        if (dt.Rows.Count == 0) // בדיקה אם אין נתונים להציג
+        DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
+
+        if (dt.Rows.Count == 0)
         {
             st = "אין נתונים";
+            return;
         }
-        else
+
+        st = "<table border='1' style='width:95%; margin:auto; background:pink; border-collapse:collapse;'>";
+
+        st += "<tr>";
+        st += "<th>Id</th>";
+        st += "<th>שם חוג</th>";
+        st += "<th>מחיר</th>";
+        st += "<th>מספר משתתפים</th>";
+        st += "<th>שם מורה</th>";
+        st += "</tr>";
+
+        for (int i = 0; i < dt.Rows.Count; i++)
         {
-            st = "<table border='1' style='width:95%; margin:auto; background-color:pink;'>"; // יצירת טבלה עם עיצוב
-            st += "<th style='background-color:pink;'>id</th>";
-            st += "<th style='background-color:pink;'>שם החוג</th>";
-            st += "<th style='background-color:pink;'>מחיר החוג</th>";
-            st += "<th style='background-color:pink;'>מספר אנשים מותר</th>";
-            st += "<th style='background-color:pink;'>שם המורה</th>";
             st += "<tr>";
 
-            for (int i = 0; i < dt.Rows.Count; i++) // לולאה לעבור על כל השורות בטבלה ולהוסיף אותן לטבלה שנוצרה
-            {
-                st += "<tr>";
+            st += "<td>" + dt.Rows[i]["Id"] + "</td>";
+            st += "<td>" + dt.Rows[i]["hobbyName"] + "</td>";
+            st += "<td>" + dt.Rows[i]["hobbyPrice"] + "</td>";
+            st += "<td>" + dt.Rows[i]["numberOfPeopleAllowed"] + "</td>";
+            st += "<td>" + dt.Rows[i]["techerName"] + "</td>";
 
-                for (int j = 0; j < dt.Columns.Count; j++) // לולאה לעבור על כל העמודות בשורה ולהוסיף את הערכים לתאים בטבלה
-                {
-                    st += "<td>" + dt.Rows[i][j] + "</td>";
-                }
-
-                st += "</tr>";
-            }
-
-            st += "</table>";
+            st += "</tr>";
         }
+
+        st += "</table>";
     }
 }

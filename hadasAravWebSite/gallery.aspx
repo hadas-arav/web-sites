@@ -7,15 +7,15 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
 
-    <img src="images/מודרני2.png" alt="ריקוד-מודרני" width="500px" height="333px">
-    <img src="images/היפהופ2.jpg" alt="ריקוד-היפ הופ" width="500px" height="333px">
-    <img src="images/ריקוד-בלט.jpg" alt="ריקוד-בלט" width="500px" height="333px">
-    <img src="images/כדורעף.jpg" alt="כדורעף" width="500px" height="333px">
-    <img src="images/כדורסל.jpg" alt="כדורסל" width="500px" height="333px">
-    <img src="images/כדורגל.jpg" alt="כדורגל" width="500px" height="333px">
-    <img src="images/יוגה.jpg" alt="יוגה" width="500px" height="333px">
-    <img src="images/פילאטיס.jpg" alt="פילאטיס" width="500px" height="333px">
-    <img src="images/אופנוע ים.jpg" alt="אופנוע ים" width="500px" height="333px">
-    <img src="images/ספורט ימי.jpg" alt="גלישה" width="500px" height="333px">
+    <img src="images/מודרני2.png" alt="ריקוד-מודרני" width="500" height="333">
+    <img src="images/היפהופ2.jpg" alt="ריקוד-היפ הופ" width="500" height="333">
+    <img src="images/ריקוד-בלט.jpg" alt="ריקוד-בלט" width="500" height="333">
+    <img src="images/כדורעף.jpg" alt="כדורעף" width="500" height="333">
+    <img src="images/כדורסל.jpg" alt="כדורסל" width="500" height="333">
+    <img src="images/כדורגל.jpg" alt="כדורגל" width="500" height="333">
+    <img src="images/יוגה.jpg" alt="יוגה" width="500" height="333">
+    <img src="images/פילאטיס.jpg" alt="פילאטיס" width="500" height="333">
+    <img src="images/אופנוע ים.jpg" alt="אופנוע ים" width="500" height="333">
+    <img src="images/ספורט ימי.jpg" alt="גלישה" width="500" height="333">
 
 </asp:Content>

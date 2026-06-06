@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <script language ="javascript">
-        function checkAll(); {
+        function checkAll() {
             return true;
         }
     </script>
