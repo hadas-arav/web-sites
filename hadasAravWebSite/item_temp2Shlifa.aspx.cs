@@ -7,11 +7,14 @@ public partial class _Default : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        // קבלת הערכים שהוזנו בטופס החיפוש
         string hobbyName = Request.Form["hobbyName"];
         string teacherName = Request.Form["teacherName"];
 
+        // שאילתת בסיס שמחזירה את כל החוגים
         string sql = "SELECT * FROM tHobby WHERE 1=1";
 
+        // אם הוזן שם חוג, מוסיף תנאי חיפוש לפי שם החוג
         if (!string.IsNullOrEmpty(hobbyName))
         {
             sql += " AND hobbyName LIKE N'%" + hobbyName + "%'";
@@ -22,6 +25,7 @@ public partial class _Default : System.Web.UI.Page
             sql += " AND techerName LIKE N'%" + teacherName + "%'";
         }
 
+        // ביצוע השאילתה ושמירת התוצאות בטבלת נתונים
         DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
 
         if (dt.Rows.Count == 0)
@@ -30,6 +34,7 @@ public partial class _Default : System.Web.UI.Page
             return;
         }
 
+        //בניית טבלה להצגת הנתונים
         st = "<table border='1' style='width:95%; margin:auto; background:pink; border-collapse:collapse;'>";
 
         st += "<tr>";
@@ -40,6 +45,7 @@ public partial class _Default : System.Web.UI.Page
         st += "<th>שם מורה</th>";
         st += "</tr>";
 
+        // מעבר על כל הרשומות שהוחזרו מהמסד
         for (int i = 0; i < dt.Rows.Count; i++)
         {
             st += "<tr>";

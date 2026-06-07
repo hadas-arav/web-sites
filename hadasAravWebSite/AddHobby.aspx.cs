@@ -23,7 +23,7 @@ public partial class AddHobby : System.Web.UI.Page
                  numberOfPeopleAllowed + "', N'" + // N לפני מחרוזת בעברית כדי לציין שמדובר בטקסט
                  techerName + "')"; // הוספת עמודה לטבלה
 
-            MyAdoHelper.DoQuery("MyDB.mdf", sqlInsert); // ביצוע השאילתה להוספת תחביב חדש
+            MyAdoHelper.DoQuery("MyDB.mdf", sqlInsert); // ביצוע השאילתה להוספת חוג חדש
             st = "בוצע";
         }
 

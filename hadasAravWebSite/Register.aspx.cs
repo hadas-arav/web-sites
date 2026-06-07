@@ -16,12 +16,14 @@ public partial class Register : Page
             string phone2 = Request.Form["tel2"];
             string age = Request.Form["age"];
             string hobby = Request.Form["hobby"];
-            string hour = Request.Form["time"]; // תיקון
+            string hour = Request.Form["time"];
 
+            // שאילתה לבדיקה האם המשתמש כבר קיים
             string sql =
                 "SELECT * FROM tUsers " +
                 "WHERE Email = N'" + email + "'";
 
+            // בדיקה האם המשתמש כבר קיים
             bool userExists = MyAdoHelper.IsExist(sql);
 
             if (userExists)
@@ -30,6 +32,7 @@ public partial class Register : Page
             }
             else
             {
+                //שאילתה להוספת משתמש חדש
                 string sqlInsert =
                     "INSERT INTO tUsers " +
                     "(FullName, Email, Password, PhoneNumber, AgeGroup, Hobby, hour) " +
@@ -43,6 +46,7 @@ public partial class Register : Page
                     "N'" + hour + "'" +
                     ")";
 
+                // ביצוע השאילתה להוספת המשתמש החדש
                 MyAdoHelper.DoQuery("mydb.mdf", sqlInsert);
 
                 Response.Redirect("SignIn.aspx");

@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <script language="javascript">
+        // מאפס את הודעות השגיאה לפני הבדיקה
         function checkAll() {
         nameErr.innerHTML = "";
         priceErr.innerHTML = "";
@@ -18,7 +19,8 @@
         return f;
     }
 
-    function checkName() {
+        function checkName() {
+            // מקבל את שם החוג שהוזן
         name = document.getElementById("hobbyName").value;
 
         if (name.length < 2 || name.length > 30) { //בודק שהשם בין 2 ל30 תווים
